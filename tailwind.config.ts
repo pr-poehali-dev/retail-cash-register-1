@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1774470217625277007.html"
 	],
 	prefix: "",
 	theme: {
@@ -69,6 +70,22 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(8px)' },
+					to: { opacity: '1', transform: 'translateY(0)' },
+				},
+				'scale-in': {
+					from: { opacity: '0', transform: 'scale(0.95)' },
+					to: { opacity: '1', transform: 'scale(1)' },
+				},
+				'slide-in': {
+					from: { opacity: '0', transform: 'translateX(-10px)' },
+					to: { opacity: '1', transform: 'translateX(0)' },
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 10px rgba(0, 255, 179, 0.3)' },
+					'50%': { boxShadow: '0 0 25px rgba(0, 255, 179, 0.7)' },
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -88,7 +105,11 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease forwards',
+				'scale-in': 'scale-in 0.2s ease forwards',
+				'slide-in': 'slide-in 0.25s ease forwards',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 			}
 		}
 	},
